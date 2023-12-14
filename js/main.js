@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(products => {
         // Handle the products data
         products.forEach(product => {
+            // Extract the first 10 words from the description
+        //   const shortDescription = product.description.split(' ').slice(0, 10).join(' ');
+
           // Using template literals for cleaner code
           const productHTML = `
             <div class="product">
@@ -14,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="productInside">
               <span>${product.category}</span>
               <h3>${product.name}</h3>
-              <p>${product.description}</p>
-              <p>₹${product.price.toFixed(2)}</p>
+              <p>₹${product.price}</p>
               </div>
             </div>
           `;

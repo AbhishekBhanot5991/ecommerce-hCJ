@@ -1,5 +1,5 @@
 :root{
-    --primary-color:#FF0035;
+    --primary-color:#2874f0;
     --secondary-color:#0E131F;
     --white-color:#fff;
     --gray-color:#808080;
@@ -14,7 +14,7 @@ button{
     cursor: pointer;
 }
 header{
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,7 +100,10 @@ nav ul li a{
 .product {
     border: 1px solid #ddd;
     margin: 10px;
+    padding: 15px;
     max-width: 355px;
+    border-radius: 10px;
+    text-align: center;
     width: 30%; /* Three products per row */
 }
 .productInside{
@@ -113,6 +116,6 @@ nav ul li a{
     max-width: 100%;
     height: 300px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: top;
 }
