@@ -1,0 +1,92 @@
+:root{
+    --primary-color:#FF0035;
+    --secondary-color:#0E131F;
+    --white-color:#fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button{
+    cursor: pointer;
+}
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    background-color: var(--primary-color);
+}
+.logo h1{
+    color: var(--white-color);
+    cursor: pointer;
+}
+header i{
+    color:var(--white-color);
+    cursor: pointer;
+}
+#quantity{
+    text-align: center;
+    width: 100px;
+}
+#incr{
+    padding: .5rem 1rem;
+    background-color: green;
+    border: none;
+    color: var(--white-color);
+}
+#decr{
+    padding: .5rem 1rem;
+    background-color: red;
+    border: none;
+    color: var(--white-color);
+}
+.btnInput{
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    display: flex;
+    margin-right: .8rem;
+}
+nav ul li:last-child{
+    margin-right: 0 !important;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+.header-right{
+    display: flex;
+}
+.login i{
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.updateCart{
+    height: 15px;
+    width: 15px;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    position: absolute;
+    right:-60%;
+    top: -55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cartUpdate{
+    position: relative;
+}
