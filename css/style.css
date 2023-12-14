@@ -4,7 +4,11 @@
     --white-color:#fff;
     --gray-color:#808080;
 }
-
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
 *{
     margin: 0;
     padding: 0;
