@@ -1,3 +1,32 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const productsContainer = document.getElementById('products-list');
+
+    // Fetch products API
+    fetch('https://charming-leotard-pig.cyclic.app/api/products/')
+      .then(response => response.json())
+      .then(products => {
+        // Handle the products data
+        products.forEach(product => {
+          // Using template literals for cleaner code
+          const productHTML = `
+            <div class="product">
+              <img src="${product.imageUrl}" alt="${product.name}">
+              <div class="productInside">
+              <span>${product.category}</span>
+              <h3>${product.name}</h3>
+              <p>${product.description}</p>
+              <p>₹${product.price.toFixed(2)}</p>
+              </div>
+            </div>
+          `;
+
+          // Append the product HTML to the products container
+          productsContainer.innerHTML += productHTML;
+        });
+      })
+      .catch(error => console.error('Error fetching products:', error));
+  });
+
 let quantity = 0;
 function inc(){
     quantity++;
@@ -15,44 +44,3 @@ function updateQuantity(){
    const updateCart = document.querySelector('.updateCart');
    updateCart.textContent = quantity;
 }
-
-//fetching products list
-document.addEventListener('DOMContentLoaded',()=>{
-    const productsContainer = document.querySelector('products-list');
-
-    fetch('https://charming-leotard-pig.cyclic.app/api/products')
-    .then(res=>res.json())
-    // console.log(res)
-    .then(products=>{
-        products.forEach(product => {
-            // Create a container for each product
-            const productContainer = document.createElement('div');
-            productContainer.classList.add('product');
-
-            // Create an image element
-            const productImage = document.createElement('img');
-            productImage.src = product.imageUrl;
-            productImage.alt = product.name;
-
-            // Create elements for name, description, and price
-            const productName = document.createElement('h3');
-            productName.textContent = product.name;
-
-            const productDescription = document.createElement('p');
-            productDescription.textContent = product.description;
-
-            const productPrice = document.createElement('p');
-            productPrice.textContent = `Price: $${product.price.toFixed(2)}`;
-
-            // Append elements to the product container
-            productContainer.appendChild(productImage);
-            productContainer.appendChild(productName);
-            productContainer.appendChild(productDescription);
-            productContainer.appendChild(productPrice);
-
-            // Append the product container to the products container
-            productsContainer.appendChild(productContainer);
-        });
-    })
-    .catch(error=>console.error('Errors fetching products:', error))
-})
