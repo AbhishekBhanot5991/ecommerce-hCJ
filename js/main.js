@@ -12,27 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
           // Using template literals for cleaner code
           const productHTML = `
-            <div class="product" data-product-id="${product._id}">
+            <a href="single-product.html?id=${product._id}" class="product" data-product-id="${product._id}">
               <img src="${product.imageUrl}" alt="${product.name}">
               <div class="productInside">
               <span>${product.category}</span>
               <h3 class="productName">${product.name}</h3>
               <p class="productPrice">₹${product.price}</p>
               </div>
-            </div>
+            </a>
           `;
 
           // Append the product HTML to the products container
           productsContainer.innerHTML += productHTML;
-          const productCard = productsContainer.querySelector(`[data-product-id="${product._id}"]`);
-          productCard.addEventListener('click', () => openProductPage(product._id));
+        //   const productCard = productsContainer.querySelector(`[data-product-id="${product._id}"]`);
+        //   productCard.addEventListener('click', () => openProductPage(product._id));
         });
       })
       .catch(error => console.error('Error fetching products:', error));
-      function openProductPage(productId) {
-        // Redirect to the single product page using the product ID
-        window.location.href = `single-product.html?id=${productId}`;
-      }
   });
 
 let quantity = 0;
