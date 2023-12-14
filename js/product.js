@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Extract product ID from the URL
     const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
+    const productId = urlParams.get('_id');
 
     // Fetch the specific product by ID
     fetch(`https://charming-leotard-pig.cyclic.app/api/products/${productId}`)
