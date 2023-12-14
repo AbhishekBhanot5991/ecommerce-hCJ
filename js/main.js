@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="productInside">
               <span>${product.category}</span>
               <h3>${product.name}</h3>
-              <p>₹${product.price}</p>
+              <p class="productPrice">₹${product.price}</p>
               </div>
             </div>
           `;
