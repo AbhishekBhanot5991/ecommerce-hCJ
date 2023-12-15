@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <img src="${product.imageUrl}" alt="${product.name}">
               <div class="productInside">
               <span>${product.category}</span>
-              <h3 class="productName">${product.name}</h3>
+              <h5 class="productName">${product.name}</h5>
               <p class="productPrice">₹${product.price}</p>
               </div>
             </a>
@@ -30,21 +30,3 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(error => console.error('Error fetching products:', error));
   });
-
-let quantity = 0;
-function inc(){
-    quantity++;
-    updateQuantity();
-}
-function dec(){
-    if(quantity > 0){
-        quantity--;
-        updateQuantity();
-    }
-}
-function updateQuantity(){
-   const quantityInput = document.querySelector("#quantity");
-   quantityInput.value = quantity;
-   const updateCart = document.querySelector('.updateCart');
-   updateCart.textContent = quantity;
-}

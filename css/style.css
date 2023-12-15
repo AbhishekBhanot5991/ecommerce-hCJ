@@ -40,20 +40,20 @@ header i{
 }
 #incr{
     padding: .5rem 1rem;
-    background-color: green;
+    background-color: var(--gray-color);
     border: none;
     color: var(--white-color);
 }
 #decr{
     padding: .5rem 1rem;
-    background-color: red;
+    background-color: var(--gray-color);
     border: none;
     color: var(--white-color);
 }
 .btnInput{
-    padding: 3rem;
+    padding-bottom: .5rem;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 nav ul{
     list-style: none;
@@ -100,6 +100,10 @@ nav ul li a{
 .cartUpdate{
     position: relative;
 }
+.product-container{
+    display: flex;
+    padding: 2rem 5rem;
+}
 .products-container {
     display: flex;
     flex-wrap: wrap;
@@ -131,4 +135,57 @@ nav ul li a{
 .productPrice{
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.border-none{
+    border: none !important;
+}
+.product-details{
+    padding-left: 10rem;
+}
+label,input{
+    margin-bottom: .5rem;
+    width: 100%;
+}
+form input{
+    padding: .5rem;
+}
+.custmLoginTab{
+    display: flex !important;
+    justify-content: center !important;
+    border: none !important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: unset !important;
+}
+.nav-tabs .nav-link{
+    border: none !important;
+    border-radius: unset !important;
+} 
+form button{
+    padding: .5rem 1rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.product-details ul{
+    padding-left: 1.3rem;
+    padding-bottom: .5rem;
+}
+.product-details span{
+    color: var(--gray-color);
+}
+.product-name{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+.product-price{
+    padding-bottom: .5rem;
+}
+.add-to-cart-btn{
+    padding: .5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border: none;
 }

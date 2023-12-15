@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EDUKAN</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,7 +23,7 @@
         </nav>
         <div class="header-right">
             <div class="login">
-                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user" id="modal" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
             </div>
             <div class="cartUpdate">
                 <div class="updateCart">0</div>
@@ -33,12 +34,51 @@
     <div id="products-list" class="products-container">
 
     </div>
-    <!-- <div class="btnInput">
-        <button onclick="dec()" id="incr">-</button>
-        <input type="text" value="0" id="quantity" readonly>
-        <button onclick="inc()" id="decr">+</button>
-    </div> -->
     
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-none">
+          <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <nav>
+                <div class="nav nav-tabs custmLoginTab" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-login-tab" data-bs-toggle="tab" data-bs-target="#nav-login" type="button" role="tab" aria-controls="nav-login" aria-selected="true">Login</button>
+                  <button class="nav-link" id="nav-signup-tab" data-bs-toggle="tab" data-bs-target="#nav-signup" type="button" role="tab" aria-controls="nav-signup" aria-selected="false">Signup</button>
+                  
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab" tabindex="0">
+                    <form action="" id="loginForm">
+                        <label for="">Email</label><br>
+                        <input type="text" id="email"><br>
+                        <label for="">Password</label><br>
+                        <input type="text" id="password"><br>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="nav-signup" role="tabpanel" aria-labelledby="nav-signup-tab" tabindex="0">
+                    <form action="" id="signupForm">
+                        <label for="">Email</label><br>
+                        <input type="text" id="email"><br>
+                        <label for="">Password</label><br>
+                        <input type="text" id="password"><br>
+                        <label for="">Confirm Password</label><br>
+                        <input type="text" id="cPassword"><br>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+                
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js" defer></script>
     <!-- <script src="js/product.js" defer></script> -->
 </body>
