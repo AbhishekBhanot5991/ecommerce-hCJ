@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const productsContainer = document.getElementById('products-list');
 
     // Fetch products API
-    fetch('https://charming-leotard-pig.cyclic.app/api/products/')
+    fetch('http://localhost:3000/api/products/')
       .then(response => response.json())
       .then(products => {
         // Handle the products data
