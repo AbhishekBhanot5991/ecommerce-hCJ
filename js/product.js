@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const productImageContainer = document.getElementById('product-image');
   const productDetailsContainer = document.getElementById('product-details');
 
-  fetch(`https://charming-leotard-pig.cyclic.app/api/products/${productId}`)
+  fetch(`http://localhost:3000/api/products/${productId}`)
       .then(response => {
           if (!response.ok) {
               throw new Error(`Failed to fetch product (status ${response.status}).`);

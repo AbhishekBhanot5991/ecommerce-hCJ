@@ -58,6 +58,8 @@ header i{
 nav ul{
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 nav ul li{
     list-style: none;
@@ -89,7 +91,7 @@ nav ul li a{
     color: var(--white-color);
     position: absolute;
     right:-60%;
-    top: -55%;
+    top: -38%;
     display: flex;
     justify-content: center;
     align-items: center;
